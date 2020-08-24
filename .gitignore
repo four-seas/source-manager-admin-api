@@ -16,3 +16,4 @@
 .idea/
 go.sum
 latest_log
+log/*.log
