@@ -7,9 +7,9 @@ import (
 )
 
 type Model struct {
-	ID        uint     `gorm:"column:id;primary_key;AUTO_INCREMENT"`
-	CreatedAt DateTime `gorm:"default:CURRENT_TIMESTAMP;type:datetime;NOT NULL"`
-	UpdatedAt DateTime `gorm:"default:CURRENT_TIMESTAMP;type:datetime;NOT NULL"`
+	ID        uint     `gorm:"column:id;primary_key;AUTO_INCREMENT" json:"id"`
+	CreatedAt DateTime `gorm:"default:CURRENT_TIMESTAMP;type:datetime;NOT NULL" json:"created_at"`
+	UpdatedAt DateTime `gorm:"default:CURRENT_TIMESTAMP;type:datetime;NOT NULL" json:"updated_at"`
 }
 
 type DateTime struct {

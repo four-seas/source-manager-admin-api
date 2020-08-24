@@ -20,6 +20,6 @@ func GetHousesInfoList(info request.PageInfo) (err error, list interface{}, tota
 	db := global.GVA_DB.Model(&model.Houses{})
 	var hourseList []model.Houses
 	err = db.Count(&total).Error
-	err = db.Limit(limit).Offset(offset).Find(&hourseList).Error
+	err = db.Limit(limit).Offset(offset).Preload("Images").Find(&hourseList).Error
 	return err, hourseList, total
 }
