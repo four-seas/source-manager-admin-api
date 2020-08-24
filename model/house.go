@@ -5,9 +5,9 @@ type Houses struct {
 	Model
 	MasterId       int64    `gorm:"column:master_id;NOT NULL" json:"master_id"`               // 数据在主体网站的标识id
 	Title          string   `gorm:"column:title;NOT NULL" json:"title"`                       // 标题
-	TotalPrice     string   `gorm:"column:total_price;NOT NULL" json:"total_price"`           // 挂牌总价
-	TotalArea      string   `gorm:"column:total_area;NOT NULL" json:"total_area"`             // 建筑面积（平方米）
-	UnitPriceValue string   `gorm:"column:unit_price_value;NOT NULL" json:"unit_price_value"` // 挂牌单价/平方米
+	TotalPrice     float32  `gorm:"column:total_price;NOT NULL" json:"total_price"`           // 挂牌总价
+	TotalArea      float32  `gorm:"column:total_area;NOT NULL" json:"total_area"`             // 建筑面积（平方米）
+	UnitPriceValue float32  `gorm:"column:unit_price_value;NOT NULL" json:"unit_price_value"` // 挂牌单价/平方米
 	CommunityName  string   `gorm:"column:community_name;NOT NULL" json:"community_name"`     // 小区名
 	Area           string   `gorm:"column:area;NOT NULL" json:"area"`                         // 区域，例如（海珠区）
 	Addr           string   `gorm:"column:addr;NOT NULL" json:"addr"`                         // 详细地址
